@@ -1,0 +1,12 @@
+#задание 2
+import random
+names = ['dhhgfjjhsa.txt', 'hhdsdahffh.txt', 'afdgdhjsds.txt', 'sggjghddss.txt', 'fjdjgdghdf.txt', 'sjssahjfga.txt', 'agsgdjhhfj.txt', 'gafadhadda.txt', 'hdagajfhhj.txt', 'fhjhafhdfa.txt']
+
+def func_2(file_name): 
+    for i in names:
+        with open(file_name, 'w') as f:
+                f.write('Olzhobaeva Avat')
+        if i != file_name:
+            print(f'файла {i} не существует')
+        
+func_2(random.choice(names))
