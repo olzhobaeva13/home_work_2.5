@@ -1,0 +1,16 @@
+#задание 3
+spendings = [140, 30, 999, 145, 538, 878, 901, 613, 471, 286, 147, 90]
+income = [300, 40, 0, 4000, 8911, 73, 85, 0, 9000, 941, 658, 190]
+
+avg_month_coef = []
+
+def coef():
+    for n in range(len(spendings)):
+        try:
+            avg_month_coef.append(round(spendings[n]/income[n], 2))
+        except ZeroDivisionError:
+            avg_month_coef.append(0)
+    coef_year = sum(avg_month_coef)/12
+    print(f'средний коэффициент распределения расходов за прошлый год: {coef_year}')
+
+coef()
